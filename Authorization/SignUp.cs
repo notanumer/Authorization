@@ -9,7 +9,13 @@ namespace Authorization
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //LAPTOP-2V5DCBSC\SQLEXPRESS
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new SignIn().Show();
         }
     }
 }

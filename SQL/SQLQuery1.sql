@@ -8,3 +8,8 @@ CREATE TABLE RegistrationTable
 	userLog VARCHAR(20) NOT NULL,
 	userPswrd VARCHAR(20) NOT NULL
 )
+
+INSERT INTO RegistrationTable
+VALUES ('admin','admin')
+
+SELECT * FROM RegistrationTable

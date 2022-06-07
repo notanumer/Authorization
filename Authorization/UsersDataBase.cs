@@ -10,7 +10,7 @@ namespace Authorization
     public class UsersDataBase
     {
         private const string connectionString = @"Data Source=LAPTOP-2V5DCBSC\SQLEXPRESS;Initial Catalog=UsersDB;Integrated Security=True";
-        private readonly SqlConnection dbConnection = new(connectionString);
+        private static readonly SqlConnection dbConnection = new(@"Data Source=LAPTOP-2V5DCBSC\SQLEXPRESS;Initial Catalog=UsersDB;Integrated Security=True");
 
         public void OpenConnection()
         {
