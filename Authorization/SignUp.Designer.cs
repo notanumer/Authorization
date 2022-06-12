@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.paswordTxt = new System.Windows.Forms.TextBox();
+            this.loginTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.signUpBtn = new System.Windows.Forms.Button();
             this.signInLbl = new System.Windows.Forms.LinkLabel();
@@ -46,19 +46,19 @@
             this.label1.Text = "Введите пароль";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // paswordTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(269, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 27);
-            this.textBox1.TabIndex = 1;
+            this.paswordTxt.Location = new System.Drawing.Point(269, 224);
+            this.paswordTxt.Name = "paswordTxt";
+            this.paswordTxt.Size = new System.Drawing.Size(258, 27);
+            this.paswordTxt.TabIndex = 1;
             // 
-            // textBox2
+            // loginTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(269, 131);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 27);
-            this.textBox2.TabIndex = 3;
+            this.loginTxt.Location = new System.Drawing.Point(269, 131);
+            this.loginTxt.Name = "loginTxt";
+            this.loginTxt.Size = new System.Drawing.Size(258, 27);
+            this.loginTxt.TabIndex = 3;
             // 
             // label2
             // 
@@ -78,6 +78,7 @@
             this.signUpBtn.TabIndex = 4;
             this.signUpBtn.Text = "Зарегестрироваться";
             this.signUpBtn.UseVisualStyleBackColor = true;
+            this.signUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
             // signInLbl
             // 
@@ -88,7 +89,7 @@
             this.signInLbl.TabStop = true;
             this.signInLbl.Text = "Уже есть аккаунт? Войти";
             this.signInLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.signInLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.signInLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
             // SignUp
             // 
@@ -97,14 +98,13 @@
             this.ClientSize = new System.Drawing.Size(782, 453);
             this.Controls.Add(this.signInLbl);
             this.Controls.Add(this.signUpBtn);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.loginTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.paswordTxt);
             this.Controls.Add(this.label1);
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyCompany";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,8 +113,8 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox paswordTxt;
+        private TextBox loginTxt;
         private Label label2;
         private Button signUpBtn;
         private LinkLabel signInLbl;

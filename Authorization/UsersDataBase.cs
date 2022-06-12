@@ -10,20 +10,22 @@ namespace Authorization
     public class UsersDataBase
     {
         private const string connectionString = @"Data Source=LAPTOP-2V5DCBSC\SQLEXPRESS;Initial Catalog=UsersDB;Integrated Security=True";
-        private static readonly SqlConnection dbConnection = new(@"Data Source=LAPTOP-2V5DCBSC\SQLEXPRESS;Initial Catalog=UsersDB;Integrated Security=True");
+        private static readonly SqlConnection dbConnection = new(connectionString);
 
-        public void OpenConnection()
+        private UsersDataBase() { }
+
+        public static void OpenConnection()
         {
             if (dbConnection.State == System.Data.ConnectionState.Closed)
                 dbConnection.Open();
         }
 
-        public void CloseConnection()
+        public static void CloseConnection()
         {
             if (dbConnection.State == System.Data.ConnectionState.Open)
                 dbConnection.Close();
         }
 
-        public SqlConnection GetConnection() => dbConnection;
+        public static SqlConnection GetConnection() => dbConnection;
     }
 }

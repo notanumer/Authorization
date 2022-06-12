@@ -44,7 +44,7 @@
             this.signUpBtn.TabIndex = 9;
             this.signUpBtn.Text = "Войти";
             this.signUpBtn.UseVisualStyleBackColor = true;
-            this.signUpBtn.Click += new System.EventHandler(this.signUpBtn_Click);
+            this.signUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
             // loginTextBox
             // 
@@ -89,7 +89,7 @@
             this.signInLbl.TabStop = true;
             this.signInLbl.Text = "Еще нет аккаунта? Зарегестрироваться";
             this.signInLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.signInLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.signInLbl_LinkClicked);
+            this.signInLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignInLbl_LinkClicked);
             // 
             // SignIn
             // 
